@@ -36,9 +36,6 @@ public class Main {
     }
 
     private void run() {
-//        String url = "https://tulln.umweltverbaende.at/?gem_nr=32120&jahr=2022&portal=verband&vb=tu&kat=32";
-//        String[] filter = new String[]{"Haushalte 2", "Wohnhausanlagen"};
-
         GVAParser gvaParser = new GVAParser();
 
         List<Abholtermin> termine = null;

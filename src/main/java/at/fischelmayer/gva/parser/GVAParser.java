@@ -14,6 +14,12 @@ import java.util.stream.Stream;
 
 public class GVAParser {
 
+    /**
+     * @param url    e.g. "https://tulln.umweltverbaende.at/?gem_nr=32120&jahr=2022&portal=verband&vb=tu&kat=32"
+     * @param filter e.g. "Haushalte 2", "Wohnhausanlagen"
+     * @return
+     * @throws ParseException
+     */
     public List<Abholtermin> parse( String url, List<String> filter ) throws ParseException {
         Objects.requireNonNull( url );
 
@@ -21,9 +27,7 @@ public class GVAParser {
 
         try {
             Document document = connect.get();
-
             Element body = document.body();
-
             Elements rowElements = body.getElementsByClass( "tunterlegt" );
 
             Stream<Element> elementStream = rowElements.stream();
@@ -45,7 +49,7 @@ public class GVAParser {
      * @param textRow
      * @return
      */
-    public Abholtermin from( String textRow ) {
+    private Abholtermin from( String textRow ) {
         String dateString = textRow.substring( 3, 13 );
         String description = textRow.substring( 13 ).trim();
         return new Abholtermin( dateString, description );

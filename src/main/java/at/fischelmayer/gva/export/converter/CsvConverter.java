@@ -17,7 +17,7 @@ public class CsvConverter implements Converter {
 
     @Override
     public String convert( List<Abholtermin> termine ) {
-        if ( termine == null || termine.size() == 0 ) {
+        if ( termine == null || termine.isEmpty() ) {
             throw new IllegalArgumentException( "termine must not be null or empty" );
         }
 

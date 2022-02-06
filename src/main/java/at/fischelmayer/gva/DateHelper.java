@@ -8,6 +8,10 @@ public class DateHelper {
     private static DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern( "dd.MM.yyyy" );
     private static DateTimeFormatter googleDateTimeFormatter = DateTimeFormatter.ofPattern( "MM/dd/yyyy" );
 
+
+    private DateHelper() {
+    }
+
     /**
      * @param date in format dd.MM.yyyy (e.g. 31.01.2022)
      * @return
