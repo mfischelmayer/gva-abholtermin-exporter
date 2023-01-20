@@ -2,6 +2,11 @@
 
 Lädt die Seite des "Gemeindeverband für Abfallbeseitigung" und exportiert die Abholtermin Daten in ein Google Kalender kompatibles Format.
 
+## Download
+
+Letzte Version für 2023:
+https://github.com/mfischelmayer/gva-abholtermin-exporter/releases/download/1.1.0/gva-1.1.0.jar
+
 ## Benutzung
 
 ### Parameter
