@@ -19,10 +19,10 @@ public class Main {
 
     private static final Logger LOG = Logger.getLogger( Main.class.getName() );
 
-    @Parameter( names = { "--url", "-u" }, description = "Die URL der GVA Seite" )
+    @Parameter( names = { "--url", "-u" }, description = "Die URL der GVA Seite", required = true )
     String url;
 
-    @Parameter( names = { "--file", "-f" }, description = "Das Pfad fuer die Output Datei" )
+    @Parameter( names = { "--file", "-f" }, description = "Das Pfad fuer die Output Datei", required = true )
     String filename;
 
     @Parameter( names = "--filter", description = "Zeilenfilter" )
